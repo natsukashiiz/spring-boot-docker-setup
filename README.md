@@ -1,4 +1,4 @@
-# applicaiotn-local.yml
+# application-local.yml
 ```yaml
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -11,7 +11,7 @@
     port: 6379
 ```
 
-# applicaiotn-test.yml
+# application-test.yml
 ```yaml
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -36,10 +36,15 @@ docker-compose up -d
 docker build -t server .
 ```
 
+## Docker network list
+```shell
+docker network ls
+```
+
 ## Run container
 
 ```shell
-docker run --network natsukashiiz-server-shop_server-net --name server-container -p 8080:8080 -d server
+docker run --network <NETWORK NAME> --name server-container -p 8080:8080 -d server
 ```
 
 ## URL Application running
